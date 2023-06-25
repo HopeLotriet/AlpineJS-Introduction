@@ -23,12 +23,37 @@
     <h1>Counter</h1>
     <div class="counter" x-text="count"></div>
     <div>
-      <button @click="count++">+</button>
-      <button @click="count--">-</button>
+      <button @click="if (count < 100)count++">+</button>
+      <button @click="if (count > 0)count--">-</button>
+      
     </div>
 </div>
+
+<hr>
+<div x-data="counter">
+    <h1>Using AlpineJS with external JavaScript</h1>
+    <!-- Other HTML here -->
+<div x-text="count">
+    
+        
+    </div>
+    <div>
+        <button @click= "if (count < 100)increment()">+</button>
+        <button @click= "if (count > 0)decrement()">-</button>
+        <button @click= " if (count = 0)reset()">Reset</button>
+        </div>
+
 </div>
+
    
+
+<script src="counter.js"></script>
+<script src="index.js"></script>
+
+</div>
+<hr>
+
+<a href="./index.html">Tutorial Examples</a>
 
 </body>
 </html>
